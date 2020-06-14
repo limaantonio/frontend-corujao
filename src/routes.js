@@ -7,6 +7,7 @@ import SignUpProfile from './pages/SignUpProfile';
 import SignIn from './pages/SignIn';
 import ResetPassword from './pages/ResetPassword';
 import Emparelhamento from './pages/Emparelhamento';
+import SolicitacaoEmparelhamento from './pages/SolicitacaoEmparelhamento';
 
 
 const AppStack = createStackNavigator();
@@ -27,6 +28,7 @@ export default function App(){
         <AppStack.Screen name="SignIn" component={SignIn}/>
         <AppStack.Screen name="ResetPassword" component={ResetPassword}/>
         <AppStack.Screen name="Emparelhamento" component={Emparelhamento}/>
+        <AppStack.Screen name="SolicitacaoEmparelhamento" component={SolicitacaoEmparelhamento}/>
        
       </AppStack.Navigator>
     </NavigationContainer>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet,TextInput, Text, View,TouchableOpacity, KeyboardAvoidingView, Image} from 'react-native';
 import {useNavigation,useRoute} from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/Feather';
 
 import logoSearch from '../../assets/LogoLocalizando.png';
 
@@ -12,6 +13,11 @@ export default function Emparelhamento(){
     <>
       <KeyboardAvoidingView style={{flex: 1}} behavior={Platform.OS === 'ios' ? 'padding' : undefined }>
           <View style={styles.container}> 
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => {navigation.navigate('SolicitacaoEmparelhamento')}} style={styles.buttonArrow}>
+                  <Icon name="arrow-right" size={30} color="#000"/>
+              </TouchableOpacity>
+            </View>
             <View style={styles.content}>
               <Image source={logoSearch}  />
               <Text style={styles.textTitle}>Localizando sensores</Text>
