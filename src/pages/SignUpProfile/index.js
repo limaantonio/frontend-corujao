@@ -59,7 +59,7 @@ export default function SignUpProfile(){
            
 
             <View style={styles.contentButton}>
-              <TouchableOpacity  style={styles.btn}>
+              <TouchableOpacity onPress={() => navigation.navigate('Emparelhamento')} style={styles.btn}>
                 <Text style={styles.textBtn}>Próximo</Text>
               </TouchableOpacity>
             </View>

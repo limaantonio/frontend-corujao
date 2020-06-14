@@ -37,7 +37,7 @@ export default function SignIn(){
               style={styles.inputs}
             />
             <TouchableOpacity onPress={() => {navigation.navigate('ResetPassword')}} >
-              <Text style={styles.txtLegend}>Esqueceu a senha? Recupear.</Text>
+              <Text style={styles.txtLegend}>Esqueceu a senha? Recuperar.</Text>
             </TouchableOpacity>
            
 

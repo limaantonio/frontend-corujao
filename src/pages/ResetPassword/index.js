@@ -14,7 +14,7 @@ export default function ResetPassword(){
       <KeyboardAvoidingView style={{flex: 1}} behavior={Platform.OS === 'ios' ? 'padding' : undefined }>
           <View style={styles.container}> 
             <View style={styles.header}>
-            <TouchableOpacity onPress={() => {navigation.navigate('SignUp')}} style={styles.buttonArrow}>
+            <TouchableOpacity onPress={() => {navigation.navigate('SignIn')}} style={styles.buttonArrow}>
                   <Icon name="arrow-left" size={30} color="#fff"/>
               </TouchableOpacity>
             </View>
