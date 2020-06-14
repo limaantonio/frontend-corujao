@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SignUp from './pages/SignUp';
 import SignUpProfile from './pages/SignUpProfile';
 import SignIn from './pages/SignIn';
+import ResetPassword from './pages/ResetPassword';
 
 
 const AppStack = createStackNavigator();
@@ -23,6 +24,7 @@ export default function App(){
         <AppStack.Screen name="SignUp" component={SignUp}/>
         <AppStack.Screen name="SignUpProfile" component={SignUpProfile}/>
         <AppStack.Screen name="SignIn" component={SignIn}/>
+        <AppStack.Screen name="ResetPassword" component={ResetPassword}/>
        
       </AppStack.Navigator>
     </NavigationContainer>
