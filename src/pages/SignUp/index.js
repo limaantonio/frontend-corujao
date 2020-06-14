@@ -1,9 +1,13 @@
 import * as React from 'react';
 import { StyleSheet,TextInput, Text, View,TouchableOpacity, KeyboardAvoidingView, Image} from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import {useNavigation,useRoute} from '@react-navigation/native';
 
 import logoImg from '../../assets/Logo2.png';
+import f from '../../icons/f.svg';
+import g from '../../icons/g.svg';
+
 
 import { CreateAccountButton, CreateAccountButtonText,} from './styles';
 
@@ -48,20 +52,31 @@ export default function SignUp(){
               
               <Text style={styles.textOu}>Ou</Text>
 
-              <TouchableOpacity onPress={() => {navigation.navigate('Login')}} style={styles.btnFac}>
-                <Text style={styles.textFac}>Entrar com Facebook</Text>
+            
+              <TouchableOpacity  onPress={() => {navigation.navigate('Login')}} style={styles.btnFac}>
+                  <View style={styles.iconText}>
+                    <Icon style={styles.icon} name="facebook" color='#fff' size={20} />
+                    <Text style={styles.textFac}>Entrar com Facebook</Text>
+                  </View>
               </TouchableOpacity>
+             
 
-              <TouchableOpacity onPress={() => {navigation.navigate('Login')}} style={styles.btnGoo}>
-                <Text style={styles.textGoo}>Entrar com Gmail</Text>
-              </TouchableOpacity>
+            <TouchableOpacity onPress={() => {navigation.navigate('Login')}} style={styles.btnGoo}>
+                <View style={styles.iconText}>
+                    <Icon style={styles.icon} name="google" color='#fff' size={20} />
+                    <Text style={styles.textGoo}>Entrar com Gmail</Text>
+                 </View>
+            </TouchableOpacity>
+
+            
+              
             </View>
 
           </View>
 
         </KeyboardAvoidingView>
 
-        <CreateAccountButton onPress={() => navigation.navigate('SignUp')}>
+        <CreateAccountButton onPress={() => navigation.navigate('SignIn')}>
           <Text style={styles.textAccount}>Já tem uma conta?</Text>
           <Text style={styles.textEntrar}> Entrar</Text>
         </CreateAccountButton>
@@ -146,7 +161,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 18
+    fontSize: 18,
+    marginLeft: 20
   },
 
   btnGoo: {
@@ -155,7 +171,10 @@ const styles = StyleSheet.create({
     height: 50,
     justifyContent: 'center',
     backgroundColor: '#E85454',
-    borderRadius: 4
+    borderRadius: 4,
+    alignItems: 'center',
+    paddingRight:  20
+   
     
   },
 
@@ -163,7 +182,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 18
+    fontSize: 18,
+    marginLeft: 40
+    
   },
 
   textAccount: {
@@ -172,5 +193,15 @@ const styles = StyleSheet.create({
 
   textEntrar:{
     color: '#FF9A00',
-  }
+    
+  },
+
+  iconText:{
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+    
+  },
+
+  
 })

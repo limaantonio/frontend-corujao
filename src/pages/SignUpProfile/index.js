@@ -2,13 +2,17 @@ import React, {useState} from 'react';
 import {  StyleSheet,TextInput, Text, View,TouchableOpacity, KeyboardAvoidingView, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import CheckBox from '@react-native-community/checkbox';
+import {useNavigation,useRoute} from '@react-navigation/native';
 
 
 import logoImg from '../../assets/Logo2.png';
 import profileImg from '../../assets/profile.png';
 
-export default function SignUpProfile({navigation}){
-  const [toggleCheckBox, setToggleCheckBox] = useState(false)
+export default function SignUpProfile(){
+  const [toggleCheckBox, setToggleCheckBox] = useState(false);
+
+  const navigation = useNavigation();
+  const route = useRoute();
 
   return (
     <>
@@ -16,6 +20,9 @@ export default function SignUpProfile({navigation}){
           <View style={styles.container}> 
             <View style={styles.header}>
               <Image source={logoImg}/>
+              <TouchableOpacity onPress={() => {navigation.navigate('SignUp')}} style={styles.buttonArrow}>
+                  <Icon name="arrow-left" size={23} color="#FF9A00"/>
+              </TouchableOpacity>
             </View>
 
             <View style={styles.contentProfile}>
@@ -52,7 +59,7 @@ export default function SignUpProfile({navigation}){
            
 
             <View style={styles.contentButton}>
-              <TouchableOpacity style={styles.btn}>
+              <TouchableOpacity  style={styles.btn}>
                 <Text style={styles.textBtn}>Próximo</Text>
               </TouchableOpacity>
             </View>
