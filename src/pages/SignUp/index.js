@@ -1,0 +1,176 @@
+import * as React from 'react';
+import { StyleSheet,TextInput, Text, View,TouchableOpacity, KeyboardAvoidingView, Image} from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
+import {useNavigation,useRoute} from '@react-navigation/native';
+
+import logoImg from '../../assets/Logo2.png';
+
+import { CreateAccountButton, CreateAccountButtonText,} from './styles';
+
+
+export default function SignUp(){
+  const navigation = useNavigation();
+  const route = useRoute();
+
+  return (
+    <>
+      <KeyboardAvoidingView style={{flex: 1}} behavior={Platform.OS === 'ios' ? 'padding' : undefined }>
+          <View style={styles.container}> 
+            <View style={styles.header}>
+              <Image source={logoImg}/>
+            </View>
+
+            <View style={styles.content}>
+              <Text style={styles.textTitle}>Nova conta</Text>
+            </View>
+
+            <TextInput 
+              placeholder='Nome'
+              style={styles.inputs}
+            />
+          
+            <TextInput 
+              placeholder='E-mail' 
+              style={styles.inputs}
+            />
+            <TextInput 
+              placeholder='Criar senha' 
+              style={styles.inputs}
+            />
+            <Text style={styles.txtLegend}>Sua senha deve ter no mínimo 6 caracteres.</Text>
+            
+           
+
+            <View style={styles.contentButton}>
+              <TouchableOpacity onPress={() => {navigation.navigate('SignUpProfile')}} style={styles.btn}>
+                <Text style={styles.textBtn}>Criar Conta</Text>
+              </TouchableOpacity>
+              
+              <Text style={styles.textOu}>Ou</Text>
+
+              <TouchableOpacity onPress={() => {navigation.navigate('Login')}} style={styles.btnFac}>
+                <Text style={styles.textFac}>Entrar com Facebook</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={() => {navigation.navigate('Login')}} style={styles.btnGoo}>
+                <Text style={styles.textGoo}>Entrar com Gmail</Text>
+              </TouchableOpacity>
+            </View>
+
+          </View>
+
+        </KeyboardAvoidingView>
+
+        <CreateAccountButton onPress={() => navigation.navigate('SignUp')}>
+          <Text style={styles.textAccount}>Já tem uma conta?</Text>
+          <Text style={styles.textEntrar}> Entrar</Text>
+        </CreateAccountButton>
+    </>
+  );
+}
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    paddingHorizontal: 24,
+    paddingTop: 60,    
+  },
+
+  content:{
+    alignItems: 'center',
+  },
+
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+
+  textTitle:{
+    marginTop: 20,
+    marginBottom: 40,
+    color: '#2C2445',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+
+  inputs:{
+    height: 60,
+    backgroundColor: '#f4f4f4',
+    marginBottom: 12,
+    paddingLeft: 20,
+    borderRadius: 8
+  },
+
+  txtLegend:{
+    color: '#828282',
+  },
+
+  btn: {
+    marginTop: 40,
+    width: 320,
+    height: 50,
+    justifyContent: 'center',
+    backgroundColor: '#ff9a00',
+    borderRadius: 4
+    
+  },
+
+  textBtn:  {
+    textAlign: 'center',
+    color: '#2c2445',
+    fontWeight: 'bold',
+    fontSize: 18
+  },
+
+  contentButton:{
+    alignItems: 'center',
+  },  
+
+  textOu:{
+    marginTop: 30,
+    fontWeight: 'bold',
+  },  
+
+  btnFac: {
+    marginTop: 15,
+    width: 300,
+    height: 50,
+    justifyContent: 'center',
+    backgroundColor: '#4A89C8',
+    borderRadius: 4
+    
+  },
+
+  textFac:  {
+    textAlign: 'center',
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 18
+  },
+
+  btnGoo: {
+    marginTop: 20,
+    width: 300,
+    height: 50,
+    justifyContent: 'center',
+    backgroundColor: '#E85454',
+    borderRadius: 4
+    
+  },
+
+  textGoo:  {
+    textAlign: 'center',
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 18
+  },
+
+  textAccount: {
+    color: '#fff',
+  },
+
+  textEntrar:{
+    color: '#FF9A00',
+  }
+})
