@@ -1,6 +1,6 @@
 --------------------------------------------------------------------
 
-<img src="src/assets/Logo.jpg" width="300px"/>
+<img src="src/assets/Logo.png" width="300px"/>
 
 ## 📖 Corujão IOT
 
