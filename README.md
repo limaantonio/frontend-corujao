@@ -18,6 +18,10 @@ O Corujão IOT é uma solução que inova ao apresentar uma solução de seguran
 
 ## 🚀 Utilização
 
+## :round_pushpin: Como usar?
+
+Para clonar e executar este aplicativo, você precisará [Git] (https://git-scm.com), [Node.js] [nodejs] + [Yarn] [yarn] instalado no seu computador.
+
 <h3>Atualizações</h3>
 <ul>
 	<li>Backend feito NodeJs, <a href="https://github.com/limaantonio/backend-corujao" target="_blank">Link Repo</a></li>
