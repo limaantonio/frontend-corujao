@@ -43,7 +43,7 @@ export default function SolicitacaoEmparelhamento(){
             </View>
 
             <View style={styles.contentButton}>
-              <TouchableOpacity onPress={() => {navigation.navigate('SignUpProfile')}} style={styles.btn}>
+              <TouchableOpacity onPress={() => {navigation.navigate('MyTabs')}} style={styles.btn}>
                 <Text style={styles.textBtn}>Sincronizar</Text>
               </TouchableOpacity>
 
