@@ -4,7 +4,7 @@
 Corujão - Segurança e prevenção nas estradas.
 </h2>
 
-## 📖 Corujão IOT
+## 📖 App Mobile - Corujão IOT
 
 O Corujão IOT é uma solução que inova ao apresentar uma solução de segurança que extrapola as limitações técnicas de cobertura de internet na estrada. A solução traz o caminhoneiro para o protagonismo ao propiciar uma ferramenta para o seu bem estar onde ele está no controle, além de, apresentar um canal que mapeia ações de bandidos e permite a colaboração de informações, criando um senso de comunidade.
 
