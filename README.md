@@ -1,6 +1,8 @@
 --------------------------------------------------------------------
-
-<img src="src/assets/LogoLocalizando.png" width="300px"/>
+<h2 align="center">
+  <img src="src/assets/capa.png" width="450" title="logo" /> <br><br>
+Corujão - Segurança e prevenção nas estradas.
+</h2>
 
 ## 📖 Corujão IOT
 
