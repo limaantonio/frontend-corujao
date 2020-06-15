@@ -16,7 +16,7 @@ O Corujão IOT é uma solução
 
 ## Protótipo
 
-https://www.figma.com/file/4bF4sry8ifj63XxWUT3Ce3/Coruj%C3%A3o---Sistema-IoT?node-id=1%3A979
+<a https://www.figma.com/file/4bF4sry8ifj63XxWUT3Ce3/Coruj%C3%A3o---Sistema-IoT?node-id=1%3A979>Link do protótipo</a>
 
 ## ✍ Autores
 
